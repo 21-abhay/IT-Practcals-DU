@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Textbox Appender</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="myTextbox" placeholder="Enter text">
+        <button onclick="addTextbox()">Add Textbox</button>
+    </div>
+
+    <script>
+        function addTextbox() {
+            // Create a new text box element
+            var newTextbox = document.createElement("input");
+            newTextbox.type = "text";
+
+            // Get the reference to the existing text box and its parent element
+            var existingTextbox = document.getElementById("myTextbox");
+            var parentElement = existingTextbox.parentNode;
+
+            // Append the new text box after the existing one
+            parentElement.insertBefore(newTextbox, existingTextbox.nextSibling);
+        }
+    </script>
+
+</body>
+</html>

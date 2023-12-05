@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Continuous Image Animation</title>
+    <style>
+        #movingImage {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <img id="movingImage" src="https://picsum.photos/200/">
+    <script>
+        function moveImage() { 
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+
+            var randomX = Math.random() * (windowWidth - 100); 
+            var randomY = Math.random() * (windowHeight - 100); 
+
+            document.getElementById("movingImage").style.left = randomX + "px";
+            document.getElementById("movingImage").style.top = randomY + "px";
+
+            setTimeout(moveImage, 2000); 
+        }
+
+        window.onload = moveImage;
+    </script>
+</body>
+</html>

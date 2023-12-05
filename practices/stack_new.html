@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Stack</title>
+</head>
+<body>
+    <label for="input">Enter number</label>
+    <input type="number" name="input" id="input">
+    <button id="push" onclick="push()">PUSH</button>
+    <br>
+    <br>
+    <label for="stack"></label>
+    <textarea name="stack" id="stack" cols="30" rows="10"></textarea>
+    <button id="pop" onclick="pop()">POP</button>
+
+    <script>
+        const input = document.getElementById("input")
+        const stack = document.getElementById('stack')
+        let arr = []
+        const push = ()=>{
+            if(input.value){
+                arr.push(input.value)
+                stack.innerHTML = arr
+                input.value = ''
+            }
+            else{
+                alert("Input field is empty to push")
+            }
+        }
+        const pop = ()=>{
+            if(arr.length){
+                arr.pop();
+                stack.innerHTML = arr;
+            }
+            else{
+                alert("stack is already empty")
+            }
+        }
+    </script>
+</body>
+</html>

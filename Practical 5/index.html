@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 5</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		.btn-box{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		.color, .fontSize, .fontStyle{
+			width: 30%;
+			min-width: 350px;
+			height: 35px;
+			margin-bottom: 10px;
+			border: 1px solid #F3F1F5;
+			border-radius: 10px;
+			color: #F3F1F5;
+			background-color: #420516;
+			font-weight: bold;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<p id="container">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	</p>
+	<h2><center>Change Color</center></h2>
+	<div class="btn-box">
+		<button class="color" value="red" onclick="changeColor(event)">Red</button>
+		<button class="color" onclick="changeColor(event)">Blue</button>
+		<button class="color" onclick="changeColor(event)">Green</button>
+	</div>
+	<h2><center>Change Font-Size</center></h2>
+	<div class="btn-box">
+		<button class="fontSize" onclick="changeFontSize(event)">10px</button>
+		<button class="fontSize" onclick="changeFontSize(event)">20px</button>
+		<button class="fontSize" onclick="changeFontSize(event)">35px</button>
+	</div>
+	<h2><center>Change Font Style</center></h2>
+	<div class="btn-box">
+		<button class="fontStyle" onclick="changeFontStyle(event)">'Courier New', monospace</button>
+		<button class="fontStyle" onclick="changeFontStyle(event)">'Brush Script MT', cursive</button>
+		<button class="fontStyle" onclick="changeFontStyle(event)">Verdana, sans-serif</button>
+	</div>
+
+	<script>
+
+		const para = document.getElementById('container')
+		const changeColor= (event)=>{
+			para.style.color = event.target.innerHTML;
+		}
+
+		function changeFontSize(event){
+			para.style.fontSize = event.target.innerHTML;
+		}
+
+		function changeFontStyle(event){
+			para.style.fontFamily = event.target.innerHTML;
+		}
+		
+	</script>
+
+</body>
+</html>

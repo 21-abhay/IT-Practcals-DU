@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        tr{
+            margin: 20px 20px;
+            border-bottom: 2px solid black;
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <label for="name">Name : </label>
+    <input type="text" id="name"><br>
+    <label for="age">Age : </label>
+    <input type="number" name="age" id="age"><br><br>
+    <button onclick="addData()">Add to table</button><br><br>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        const name = document.getElementById('name');
+        const age = document.getElementById('age');
+        const table = document.getElementById('table');
+        const addData = ()=>{
+            console.log(name.value)
+            console.log(age.value)
+            if(name.value && age.value){
+                
+                const tr = document.createElement('tr')
+                const td1 = document.createElement('td')
+                const td2 = document.createElement('td')
+                td1.innerHTML = name.value;
+                td2.innerHTML = age.value;
+                tr.appendChild(td1)
+                tr.appendChild(td2)
+                table.appendChild(tr)
+                name.value = '';
+                age.value = '';
+            }
+            else{
+                alert("Input field may be empty")
+            }
+        }
+    </script>
+</body>
+</html>

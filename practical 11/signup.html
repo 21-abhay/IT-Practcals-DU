@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/index.css">
+
+    <style>
+        
+        .container{
+            border: 2px solid black;
+            /* width: fit-content; */
+            /* height: fit-content; */
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(241, 241, 211);
+        }
+        
+        form div{
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 10px;
+            /* border-bottom: 2px solid black; */
+            padding: 10px;
+            margin: 10px auto;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        
+        form button{
+            border: 2px solid black;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(128, 30, 0);
+            /* margin: auto; */
+        }
+        
+        .btn-container a{
+            border: 2px solid black;
+            font-size: 20px;
+            font-weight: bolder;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(229, 255, 0);
+            text-decoration: none;
+        }
+            </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form action="/signuppost" method="post">
+            <div>
+                <label for="name">Name  </label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email  </label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="mobile">Mobile No.  </label>
+                <input type="number" name="mobile" id="mobile" required>
+            </div>
+            <div>
+                <label for="userid">UserID  </label>
+                <input type="text" name="userid" id="userid" required>
+            </div>
+            <div>
+                <label for="password">Password  </label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+        <div class="btn-container">
+            <a href="/login">Login</a>
+            <!-- <a href="/singup">SignUp</a> -->
+        </div>
+    </div>
+</body>
+</html>
